@@ -14,7 +14,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.set('port', process.env.PORT || 3000);
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -35,4 +35,8 @@ app.get('/getUserInformation', repos.getUserInformation);
 if ('development' === app.get('env')) {
     app.use(express.errorHandler());
 }
+
+http.createServer(app).listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
+});
 module.exports = app;
