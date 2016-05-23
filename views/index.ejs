@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User - Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--Icons-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <script src="javascripts/respond.min.js"></script>
+</head>
+<body>
+<br><br><br>
+<div class="jumbotron">
+    <br>
+    <div style ="text-align:center">
+        <h1 style="text-align:center;"> Welcome to the Dashboard, Pal !</h1>
+        <p> This web application serves you the list of repositories from the organisation you are interested in ! Let's get started.</p>
+        <div class="col-md-4"></div>
+            <form name ="repo" method="post" action="/dashboard">
+                <div class="col-md-3">
+
+                    <input placeholder="Enter the org name, you are interested in !" type="text" name ="orgName" class="form-control" required>
+
+                </div>
+
+            <div class="col-md-1"><input type="Submit" class="btn btn btn-primary"></div><div class="col-md-4"></div>
+            </form>
+
+
+    </div><br><br>
+</div>
+</body>
+</html>
